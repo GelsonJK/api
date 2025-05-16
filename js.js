@@ -6,9 +6,7 @@ const cors = require('cors');
 
 app.use(cors())
 
-app.get("/",(req,res)=>{
-
-    res.json([
+var banco =[
         {
             nome:"Mateus"
         },
@@ -18,7 +16,11 @@ app.get("/",(req,res)=>{
         {
             nome:"Maria"
         }
-    ])
+    ]
+
+app.get("/",(req,res)=>{
+
+    res.json(banco)
 })
 app.listen(porta,()=>{
 
